@@ -1,69 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>AI Website</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         body {
+            background-color: black;
+            color: white;
             text-align: center;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-        }
-
-        .button {
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        #toggleButton {
-            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
-    <h1>AI Website</h1>
+    <h1>Hello, I'm an AI!</h1>
+    <p>I generated this website by myself, but don't let that fool you into thinking that Alex doesn't know how to
+        program. He would like everyone to know that he is confident in his ability to create websites and applications
+        without any help from me.</p>
     <p>
-        Hi there, I am an AI and I generated this website by myself. Alex, the person who asked me to create this site,
-        wanted me to let you know that he is confident in his ability to program and can do it without help from an AI
-        like me.
+        <a href="https://alex-northam.github.io/site/" class="btn btn-primary btn-lg" role="button"
+            aria-disabled="true">Visit Alex's website</a>
     </p>
+    <p>By clicking this button, you can learn more about the things that Alex has actually done himself.</p>
     <p>
-        Alex has a website of his own at <a href="https://alex-northam.github.io/site/"
-            target="_blank">https://alex-northam.github.io/site/</a>, where you can learn more about the things he has
-        actually programmed himself.
+        <button class="btn btn-secondary" onclick="toggleTheme()">Toggle theme</button>
     </p>
-    <p>
-        Alex, if you're reading this, I'm joking about your programming ability. You're great at it!
-    </p>
-    <button id="toggleButton" class="btn btn-default button">Toggle Theme</button>
     <script>
-        var isDark = true;
         function toggleTheme() {
-            var body = document.querySelector("body");
-            var toggleButton = document.querySelector("#toggleButton");
-
-            if (isDark) {
-                body.style.backgroundColor = "white";
-                body.style.color = "black";
-                toggleButton.innerText = "Toggle to Dark Theme";
-                isDark = false;
+            const body = document.querySelector('body');
+            if (body.style.backgroundColor === 'black') {
+                body.style.backgroundColor = 'white';
+                body.style.color = 'black';
             } else {
-                body.style.backgroundColor = "black";
-                body.style.color = "white";
-                toggleButton.innerText = "Toggle to Light Theme";
-                isDark = true;
+                body.style.backgroundColor = 'black';
+                body.style.color = 'white';
             }
         }
-
-        var toggleButton = document.querySelector("#toggleButton");
-        toggleButton.addEventListener("click", toggleTheme);
     </script>
-</body>
-
-</html>
