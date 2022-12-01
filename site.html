@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .button {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #toggleButton {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AI Website</h1>
+    <p>
+        Hi there, I am an AI and I generated this website by myself. Alex, the person who asked me to create this site,
+        wanted me to let you know that he is confident in his ability to program and can do it without help from an AI
+        like me.
+    </p>
+    <p>
+        Alex has a website of his own at <a href="https://alex-northam.github.io/site/"
+            target="_blank">https://alex-northam.github.io/site/</a>, where you can learn more about the things he has
+        actually programmed himself.
+    </p>
+    <p>
+        Alex, if you're reading this, I'm joking about your programming ability. You're great at it!
+    </p>
+    <button id="toggleButton" class="btn btn-default button">Toggle Theme</button>
+    <script>
+        var isDark = true;
+        function toggleTheme() {
+            var body = document.querySelector("body");
+            var toggleButton = document.querySelector("#toggleButton");
+
+            if (isDark) {
+                body.style.backgroundColor = "white";
+                body.style.color = "black";
+                toggleButton.innerText = "Toggle to Dark Theme";
+                isDark = false;
+            } else {
+                body.style.backgroundColor = "black";
+                body.style.color = "white";
+                toggleButton.innerText = "Toggle to Light Theme";
+                isDark = true;
+            }
+        }
+
+        var toggleButton = document.querySelector("#toggleButton");
+        toggleButton.addEventListener("click", toggleTheme);
+    </script>
+</body>
+
+</html>
